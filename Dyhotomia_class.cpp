@@ -65,17 +65,17 @@ double Dyhotomia_class::Newton()
         cout << "Висловлюю свою незадоволеність стосовно вашого eps" << endl;
         return 0;
     }
-    double x = b;
+    double x_n = b;
     if (F(a)*F(b) > 0) {
         cout << "Немає розв'язку на проміжку" << endl;
         return 0;
     }
     while (true){
-        double xnew = x - (F(x)/ pohidna(x));
-        if (fabs(xnew - x) < eps){
+        double x_n1 = x_n - (F(x_n)/ pohidna(x_n));
+        if ((x_n - x_n1) < eps){
             break;
         }
-        x = xnew;
+        x_n = x_n1;
     }
-    return x;
+    return x_n;
 }
