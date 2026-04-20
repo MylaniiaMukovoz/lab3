@@ -71,10 +71,6 @@ double Dyhotomia_class::Newton()
         return 0;
     }
     while (true){
-        if (fabs(pohidna(x)) < eps){
-            cout << "Error" << endl;
-            break;
-        }
         double xnew = x - (F(x)/ pohidna(x));
         if (fabs(xnew - x) < eps){
             break;
