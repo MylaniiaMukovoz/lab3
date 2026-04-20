@@ -8,8 +8,10 @@ int main() {
     dyh->setVolumes(0.9, 2);
     dyh->setTolerance(1e-9);
 
-    cout << "Розв'язок рівняння (Дихотомія): " << dyh->Dyhotomia() << endl;;
-    cout << "Розв'язок рівняння (Ньютона): " << dyh->Newton();
+    cout << endl << "Розв'язок рівняння (Дихотомія): " << dyh->Dyhotomia() << endl;
+    cout << "Розв'язок рівняння (Ньютона): " << dyh->Newton() << endl;
+
+    delete dyh;
 
     return 0;
 }
